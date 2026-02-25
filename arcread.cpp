@@ -615,7 +615,8 @@ size_t Archive::ReadHeader50()
           Cmd->Password.Clean();
         }
 
-#ifdef RARDLL
+//#ifdef RARDLL
+#if 0
         // Avoid new requests for unrar.dll to prevent the infinite loop
         // if app always returns the same password.
         ErrHandler.SetErrorCode(RARX_BADPWD);

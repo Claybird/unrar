@@ -629,7 +629,8 @@ bool CmdExtract::ExtractCurrentFile(Archive &Arc,size_t HeaderSize,bool &Repeat)
 
             // Avoid new requests for unrar.dll to prevent the infinite loop
             // if app always returns the same password.
-#ifndef RARDLL
+//#ifndef RARDLL
+#if 1
             continue; // Request a password again.
 #endif
           }
